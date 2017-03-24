@@ -1,0 +1,32 @@
+source ~/.bin/tmuxinator.zsh
+export PATH=$PATH:~/.rcp-scripts/bin
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/lucas/.oh-my-zsh
+export PGHOST=localhost
+
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
+
+export PATH=/usr/local/pgsql/bin:$PATH
+export EDITOR='nvim'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+source "$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh"
+
+alias n="nvim"
+alias rc="rails console"
+alias frs="foreman run rails server"
+alias rs="rails server"
+alias rock="tmuxinator start rock"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+ZSH_THEME="spaceship"
+
+source $ZSH/oh-my-zsh.sh
+SPACESHIP_PREFIX_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_TIME_SHOW=true
+
